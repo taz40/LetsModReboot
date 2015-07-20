@@ -1,6 +1,7 @@
 package com.piwalker.letsmodreboot;
 
 import com.piwalker.letsmodreboot.handler.ConfigurationHandler;
+import com.piwalker.letsmodreboot.init.ModBlocks;
 import com.piwalker.letsmodreboot.init.ModItems;
 import com.piwalker.letsmodreboot.proxy.IProxy;
 import com.piwalker.letsmodreboot.referance.Referance;
@@ -26,6 +27,7 @@ public class LetsModReboot {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         ConfigurationHandler.loadConfiguration();
         ModItems.init();
+        ModBlocks.init();
     }
 
     @Mod.EventHandler
