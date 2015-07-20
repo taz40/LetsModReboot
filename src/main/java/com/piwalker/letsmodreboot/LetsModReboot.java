@@ -1,5 +1,6 @@
 package com.piwalker.letsmodreboot;
 
+import com.piwalker.letsmodreboot.configuration.ConfigurationHandler;
 import com.piwalker.letsmodreboot.proxy.IProxy;
 import com.piwalker.letsmodreboot.referance.Referance;
 import cpw.mods.fml.common.Mod;
@@ -19,7 +20,7 @@ public class LetsModReboot {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event){
-
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
     }
 
     @Mod.EventHandler
