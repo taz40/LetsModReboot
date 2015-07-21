@@ -3,6 +3,7 @@ package com.piwalker.letsmodreboot;
 import com.piwalker.letsmodreboot.handler.ConfigurationHandler;
 import com.piwalker.letsmodreboot.init.ModBlocks;
 import com.piwalker.letsmodreboot.init.ModItems;
+import com.piwalker.letsmodreboot.init.Recipies;
 import com.piwalker.letsmodreboot.proxy.IProxy;
 import com.piwalker.letsmodreboot.referance.Referance;
 import com.piwalker.letsmodreboot.utility.LogHelper;
@@ -32,6 +33,7 @@ public class LetsModReboot {
 
     @Mod.EventHandler
     public void Init(FMLInitializationEvent event){
+        Recipies.init();
     }
 
     @Mod.EventHandler
