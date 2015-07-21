@@ -1,5 +1,6 @@
 package com.piwalker.letsmodreboot;
 
+import com.piwalker.letsmodreboot.client.handler.KeyInputEventHandler;
 import com.piwalker.letsmodreboot.handler.ConfigurationHandler;
 import com.piwalker.letsmodreboot.init.ModBlocks;
 import com.piwalker.letsmodreboot.init.ModItems;
@@ -7,6 +8,7 @@ import com.piwalker.letsmodreboot.init.Recipies;
 import com.piwalker.letsmodreboot.proxy.IProxy;
 import com.piwalker.letsmodreboot.referance.Referance;
 import com.piwalker.letsmodreboot.utility.LogHelper;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -26,14 +28,17 @@ public class LetsModReboot {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event){
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
-        ConfigurationHandler.loadConfiguration();
+        FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+        proxy.registerKeyBindings();
         ModItems.init();
         ModBlocks.init();
     }
 
     @Mod.EventHandler
     public void Init(FMLInitializationEvent event){
+        FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
         Recipies.init();
+
     }
 
     @Mod.EventHandler

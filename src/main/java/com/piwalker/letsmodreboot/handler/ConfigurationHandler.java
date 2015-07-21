@@ -17,8 +17,10 @@ public class ConfigurationHandler {
 
     public static void init(File configFile){
         //create the configuration object from a given configuration file;
-        if(configuration == null)
+        if(configuration == null){
             configuration = new Configuration(configFile);
+            loadConfiguration();
+        }
     }
 
     @SubscribeEvent
@@ -28,7 +30,7 @@ public class ConfigurationHandler {
         }
     }
 
-    public static void loadConfiguration(){
+    private static void loadConfiguration(){
         configValue = configuration.getBoolean("configValue", Configuration.CATEGORY_GENERAL, false, "This is an example configuration value.");
         if(configuration.hasChanged()) {
             configuration.save();
