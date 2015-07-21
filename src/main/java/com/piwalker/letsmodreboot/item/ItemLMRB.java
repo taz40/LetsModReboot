@@ -1,5 +1,6 @@
 package com.piwalker.letsmodreboot.item;
 
+import com.piwalker.letsmodreboot.creativetab.CreativeTabLMRB;
 import com.piwalker.letsmodreboot.referance.Referance;
 import com.piwalker.letsmodreboot.referance.Textures;
 import cpw.mods.fml.relauncher.Side;
@@ -16,6 +17,7 @@ import javax.xml.soap.Text;
 public class ItemLMRB extends Item {
     public ItemLMRB() {
         super();
+        this.setCreativeTab(CreativeTabLMRB.LMRB_TAB);
     }
 
     @Override

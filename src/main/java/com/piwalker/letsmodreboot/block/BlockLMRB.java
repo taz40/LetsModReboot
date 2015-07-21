@@ -1,5 +1,6 @@
 package com.piwalker.letsmodreboot.block;
 
+import com.piwalker.letsmodreboot.creativetab.CreativeTabLMRB;
 import com.piwalker.letsmodreboot.referance.Textures;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -14,6 +15,7 @@ public class BlockLMRB extends Block {
 
     public BlockLMRB(Material material){
         super(material);
+        this.setCreativeTab(CreativeTabLMRB.LMRB_TAB);
     }
 
     public BlockLMRB(){

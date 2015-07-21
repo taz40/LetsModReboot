@@ -3,3 +3,6 @@ item.letsmodreboot:mapleLeaf.name=Maple Leaf of Awesomeness
 
 #   Blocks
 tile.letsmodreboot:flag.name=Canadian Flag of Awesomeness
+
+#   Creative Tabs
+itemGroup.letsmodreboot=Let's Mod Reboot

@@ -1,5 +1,6 @@
 package com.piwalker.letsmodreboot.item;
 
+import com.piwalker.letsmodreboot.creativetab.CreativeTabLMRB;
 import net.minecraft.creativetab.CreativeTabs;
 
 /**
@@ -9,6 +10,5 @@ public class ItemMapleLeaf extends ItemLMRB {
     public ItemMapleLeaf(){
         super();
         this.setUnlocalizedName("mapleLeaf");
-        this.setCreativeTab(CreativeTabs.tabMisc);
     }
 }
